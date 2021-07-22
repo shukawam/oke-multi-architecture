@@ -18,6 +18,7 @@ kind: Deployment
 metadata:
   name: greet
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: greet
