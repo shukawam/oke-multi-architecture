@@ -48,3 +48,5 @@ spec:
           imagePullPolicy: Always
       imagePullSecrets:
         - name: greet-secret
+      nodeSelector: 
+        beta.kubernetes.io/arch: arm
