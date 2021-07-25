@@ -49,4 +49,4 @@ spec:
       imagePullSecrets:
         - name: greet-secret
       nodeSelector: 
-        beta.kubernetes.io/arch: arm
+        beta.kubernetes.io/arch: arm64
