@@ -1,1 +1,1 @@
-# oke-ocir-multi-architecture
+# oke-multi-architecture
