@@ -38,12 +38,10 @@ jobs:
 
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
-        with:
-          kustomize-version: "3.6.1"
 
       - name: Update Kubernetes resources
         run: |
-          cd kubernetes/overlays
+          cd deploy/kubernetes/overlays
           kustomize edit set image ${{ secrets.OCIR_BASE_PATH }}/greet=${{ secrets.OCIR_BASE_PATH }}/greet:$GITHUB_SHA
           cat kustomization.yaml
 
