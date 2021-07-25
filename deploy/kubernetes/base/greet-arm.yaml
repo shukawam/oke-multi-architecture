@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: greet
+  name: greet-arm
   annotations:
     service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 spec:
   selector:
-    app: greet
+    app: greet-arm
   ports:
     - name: http
       port: 8080
@@ -16,19 +16,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: greet
+  name: greet-arm
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: greet
+      app: greet-arm
   template:
     metadata:
       labels:
-        app: greet
+        app: greet-arm
     spec:
       containers:
-        - name: greet
+        - name: greet-arm
           image: nrt.ocir.io/orasejapan/shukawam/greet
           ports:
             - name: api
@@ -49,4 +49,4 @@ spec:
       imagePullSecrets:
         - name: greet-secret
       nodeSelector: 
-        beta.kubernetes.io/arch: amd64
+        beta.kubernetes.io/arch: arm
