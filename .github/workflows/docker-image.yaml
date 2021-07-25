@@ -43,7 +43,7 @@ jobs:
 
       - name: Update Kubernetes resources
         run: |
-          cd deploy/kubernetes/overlays/dev
+          cd kubernetes/overlays/dev
           kustomize edit set image ${{ secrets.OCIR_BASE_PATH }}/greet=${{ secrets.OCIR_BASE_PATH }}/greet:$GITHUB_SHA
           cat kustomization.yaml
 
