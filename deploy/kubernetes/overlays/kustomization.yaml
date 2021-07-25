@@ -7,5 +7,5 @@ resources:
 images:
 - name: nrt.ocir.io/orasejapan/shukawam/greet
   newName: nrt.ocir.io/orasejapan/shukawam/greet
-  newTag: e71efbd0dda000bd174762137384e9a716ed2079
+  newTag: 910f5a6a073e1e2052d0c6749e8f73e77549a656
 namespace: multi-arch
